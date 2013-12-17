@@ -1,15 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://dotob.github.io//github/blog/archives/</loc>
+        <loc>http://dotob.github.io//batteryslave/blog/archives/</loc>
         <lastmod>2013-12-17T21:09:22+01:00</lastmod>
     </url>
     <url>
-        <loc>http://dotob.github.io//github/</loc>
+        <loc>http://dotob.github.io//batteryslave/</loc>
         <lastmod>2013-12-17T21:09:22+01:00</lastmod>
     </url>
     <url>
-        <loc>http://dotob.github.io//github/robots.txt</loc>
+        <loc>http://dotob.github.io//batteryslave/robots.txt</loc>
         <lastmod>2013-12-17T21:09:22+01:00</lastmod>
     </url>
 </urlset>

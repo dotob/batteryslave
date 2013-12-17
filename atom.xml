@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://dotob.github.io//github/atom.xml" rel="self"/>
-  <link href="http://dotob.github.io//github/"/>
-  <updated>2013-12-17T21:12:17+01:00</updated>
-  <id>http://dotob.github.io//github/</id>
+  <link href="http://dotob.github.io//batteryslave/atom.xml" rel="self"/>
+  <link href="http://dotob.github.io//batteryslave/"/>
+  <updated>2013-12-17T21:25:24+01:00</updated>
+  <id>http://dotob.github.io//batteryslave/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
     
