@@ -1,0 +1,352 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>first steps with trac - batteryslave</title>
+  <meta name="author" content="basti">
+
+  
+  <meta name="description" content="in a recent little project of my alter ego dotob (website not yet nice and tasty) i wanted to try the project management tool trac from edgewall.
+its &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://batteryslave.com/blog/2009/02/24/post-first-steps-with-trac">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="batteryslave" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-6426820-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">batteryslave</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:batteryslave.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">first steps with trac</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-02-24T21:36:00+01:00" pubdate data-updated="true">Feb 24<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>in a recent little project of my alter ego dotob (website not yet nice and tasty) i wanted to try the project management tool <a href="http://trac.edgewall.org/">trac</a> from edgewall.
+its a webbased system written in python. nice because i want to look at python as a scripting language anyway.so because my webserver is a debian system the installations first steps where easy:</p>
+
+<p><code>apt-get install trac</code></p>
+
+<p>after that trac is installed in /usr/share/trac. to create your trac-environment you have to call the admin console program from trac:</p>
+
+<p><code>trac-admin /var/www/trac initenv</code></p>
+
+<p>where /var/www/trac is the place where your website will go and initenv is the command to tell trac-admin to initialise a new environment. next i setup apache to serve the new site. there are a bunch of possibilities to let apache server trac: cgi, fastcgi, mod_python etc. i tried cgi and fastcgi first but the mod_python version worked at last. so i need to install mod_phyton:</p>
+
+<p><code>apt-get install libapache-mod-python</code></p>
+
+<p>ok got some tips for the site config out of the net. here is my virtualhost-config part:</p>
+
+<p>  # Trac Configuration
+  <VirtualHost *></p>
+
+<pre><code>ServerName wop.dotob.de
+DocumentRoot /var/www/trac/
+&lt;Location &gt;
+  SetHandler mod_python
+  PythonHandler trac.web.modpython_frontend
+  PythonInterpreter main_interpreter
+  PythonOption TracEnv /var/www/trac/
+  PythonOption TracUriRoot /
+  AuthType BasicAuthName "trac"
+  # Use the SVN password file.
+  AuthUserFile /var/svn/.dav_svn.passwd
+  Require valid-user
+&lt;/Location&gt;;
+</code></pre>
+
+<p>  </VirtualHost></p>
+
+<p>sorry i assumed you have set your subversion on the same server an it is already up but i wont tell how this is done here. thats said: the /var/svn/.dav_svn.passwd is my subversion authentication file. i use the svn authentication for trac too.well now trac is up and running. you can use trac-admin, which is a great commandline tool with tab-completion and all to config stuff like when you create a ticket which level of severity are displayed or what the name of your milestones is. what i suggest also is to set some of the user permissions so you can change more stuff via the webinterface.</p>
+
+<p>another thing i wanted is to let trac look into subversion commits an retrieve some information from my commit messages. so assume i have a ticket #5 and i check some fix for that. now i can write &#8220;fix #5 introduce new style in xaml&#8221; in the commit message and trac will close the ticket #5 with the svn version mentioned and the commit message attached. so how is this done:subversion uses hook files to let users run scripts. so you go to your subversion repository (assume /var/svn/src) into the directory hooks. rename the post-commit.tmpl to post-commit. than that file is executed by subversion. now you need to insert the code from trac:</p>
+
+<p><code>REPOS="$1"REV="$2"LOG=`svnlook log -r $REV $REPOS`AUTHOR=`svnlook author -r $REV $REPOS`TRAC_ENV='/var/www/woptrac'/usr/bin/python /usr/share/doc/trac/contrib/trac-post-commit-hook -p "$TRAC_ENV" -r "$REV" -m "$LOG" -u "$AUTHOR"</code></p>
+
+<p>i found some tutorials where the LOG part was missing but i couldnt get it to work without it. another thing that cost me a lot of time: when you write the commit it didnt work for me to write: &#8220;Fixes: #5&#8221;. i think the : between the command Fiexs and the #5 was not considered by the scripts regex.i am curious about using trac. will tell how it behaves.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">basti</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-02-24T21:36:00+01:00" pubdate data-updated="true">Feb 24<span>th</span>, 2009</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://batteryslave.com/blog/2009/02/24/post-first-steps-with-trac/" data-via="batteryslave" data-counturl="http://batteryslave.com/blog/2009/02/24/post-first-steps-with-trac/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2009/02/14/post-damn-new-server-forgot-to-enable-mod_rewrite/" title="Previous Post: damn, new server: forgot to enable mod_rewrite">&laquo; damn, new server: forgot to enable mod_rewrite</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2009/05/09/post-going-to-london-skillsmatter/" title="Next Post: going to london: skillsmatter">going to london: skillsmatter &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/11/12/disqus-added/">disqus added</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/08/oredev-twitter-statistics/">oredev twitter statistics</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/07/oredev-wednesday/">oredev wednesday</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/07/oredev-memes-summary/">oredev memes summary</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/06/oredev/">oredev 2012</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/dotob">@dotob</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'dotob',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("batteryslave", 0, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/batteryslave" class="twitter-follow-button" data-show-count="false">Follow @batteryslave</a>
+  
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/speedcow@gmail.com?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - basti -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'batteryslave';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://batteryslave.com/blog/2009/02/24/post-first-steps-with-trac/';
+        var disqus_url = 'http://batteryslave.com/blog/2009/02/24/post-first-steps-with-trac/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: oredev | batteryslave]]></title>
+  <link href="http://batteryslave.com/blog/categories/oredev/atom.xml" rel="self"/>
+  <link href="http://batteryslave.com/"/>
+  <updated>2013-12-18T21:28:18+01:00</updated>
+  <id>http://batteryslave.com/</id>
+  <author>
+    <name><![CDATA[basti]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[oredev twitter statistics]]></title>
+    <link href="http://batteryslave.com/blog/2012/11/08/oredev-twitter-statistics/"/>
+    <updated>2012-11-08T23:18:00+01:00</updated>
+    <id>http://batteryslave.com/blog/2012/11/08/oredev-twitter-statistics</id>
+    <content type="html"><![CDATA[<p>with beeing at oredev one has to use twitter. so i did and it is was fun. got some new followers and found some interesting side infos and also some new guys to follow. but i wondered if there is some statistic data to gather around twitter usage. heres what i did:</p>
+
+<ul>
+<li>install t gem
+<code>
+gem install t
+</code></li>
+<li>authorize, follow the orders of t
+<code>
+t authorize
+</code></li>
+<li>query twitter and but just use stuff from beginning of conference on monday
+<code>
+t search all -n 10000 --csv "#oredev" | grep "2012-11-0[5-9]" | tee all_tweets
+</code></li>
+<li>get top 10 tweeter
+<code>
+awk -F, '{print $3}' all_tweets | sort | uniq -c | sort -n -r| head -n10
+</code></li>
+<li>time distribution of tweets grouped by hour
+<code>
+awk -F, '{print $2}' all_tweets | awk -F: '{print $1}' | uniq -c &gt; time_distribution
+</code></li>
+</ul>
+
+
+<h2>results</h2>
+
+<h4>how many tweets in 5 days</h4>
+
+<p>2639</p>
+
+<h4>top 10</h4>
+
+<ol>
+<li>141 lisacrispin</li>
+<li>115 eventmalin</li>
+<li> 92 oredev</li>
+<li> 79 jakobklamra</li>
+<li> 73 rafek</li>
+<li> 41 Aptitud_Sthlm</li>
+<li> 40 stratiteq</li>
+<li> 39 testertested</li>
+<li> 38 steenhulthin</li>
+<li> 36 siggeb</li>
+</ol>
+
+
+<h4>time distribution graph</h4>
+
+<p><img src="/images/oredev_tweets_timedistribution.png" alt="time distribution" />
+unfortunately without meaningful x-axis lables...any ideas how to get that right are welcome.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[oredev wednesday]]></title>
+    <link href="http://batteryslave.com/blog/2012/11/07/oredev-wednesday/"/>
+    <updated>2012-11-07T23:25:00+01:00</updated>
+    <id>http://batteryslave.com/blog/2012/11/07/oredev-wednesday</id>
+    <content type="html"><![CDATA[<p>after the two workshop days now the real conference part starts. and the venue is filling up.</p>
+
+<p>ok what happend today:</p>
+
+<h2>keynote</h2>
+
+<p>first keynote by <strong>david rowan</strong> from wired magazine. on <em>software won - what now?</em> he appeals to the software community to create software with a greater good in mind. he shows examples like <a href="https://docs.google.com/document/pub?id=1SGcfQz13ce4FfB-QHKF3WLwxHoCRGBouuvZn-3aoX0k">hurricane hacker</a> and educational sites. liked the moral touch.</p>
+
+<h2>morning</h2>
+
+<ul>
+<li>first talk by <strong>diana larsen</strong> about <em>managing agile teams</em> where she introduces us into <a href="http://martinfowler.com/articles/agileFluency.html">agile fluency</a> a sensible concept for agile team classification. she developed this concept with martin fowler and james shore.</li>
+<li>next <strong>lisa crispin</strong> on <em>pair programming</em>. after unfortunate technical problems she shows pros and cons on pairing. i liked the idea to have two monitors, mouse and keyboards for pairing. also i never thought about the idea of pairing with a tester or pairing two tester. but that seems interesting. after this talk i think i need to pair more ;-)</li>
+</ul>
+
+
+<h2>afternoon</h2>
+
+<ul>
+<li>the next talk by <strong>brian foote</strong> about <em>software in the age of sampling</em>. sorry didnt like it very much. he had technical problems and i couldnt get the idea. perhaps he wanted to tell that it is ok to copy, paste, transform code from other sources...donno.</li>
+<li><em>the secrets of chrome developer tools</em> by <strong>patrick dubroy</strong>. he's a developer at the google dev tools team in munich. liked the talk. biggest new info: in the sources panel you can prettyprint javascript files if they where minified for better debugging. great!</li>
+<li>the talk by <strong>shay friedman</strong> <em>what c# could do that</em> had good topic and good performance but no new info for me. he talked about dynamic keyword, expandoobject, the dlr and the iron* languages und the roslyn-(new-c#-compiler-rewritten-in-c#)-project</li>
+<li><em>it's not you, it's them: why programming languages are hard to teach</em> by <strong>zed a. shaw</strong> aka programming-motherfucker. awesome talk. really liked the language bashing ;-) had good ideas i think and invited the scientific community to do more research on how programming languages are learned and thereby can be improved towards better lernability.</li>
+</ul>
+
+
+<h2>evening</h2>
+
+<ul>
+<li>keynote by <strong>jim mccarthy</strong> of microsoft visual c++ (and more) fame. i liked the energy he had although sometimes he went into kindof preaching...perhaps less would be more. besides he promised every team can have a "shared vision" and the audience agreed that that is a very good thing, but then he didnt told us how to get there...damn.</li>
+<li>after the keynote there was great food, warm beer (<em>arg</em>), live jazz music and a quiz (where i won the first round which surprised me more than anybody else. now i own a superman-costume.)</li>
+</ul>
+
+
+<p>so i am curious about tomorrow. but i am certain it will be great. see u all</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[oredev memes summary]]></title>
+    <link href="http://batteryslave.com/blog/2012/11/07/oredev-memes-summary/"/>
+    <updated>2012-11-07T13:06:00+01:00</updated>
+    <id>http://batteryslave.com/blog/2012/11/07/oredev-memes-summary</id>
+    <content type="html"><![CDATA[<p>here on oredev the conference rooms are named after <a href="http://en.wikipedia.org/wiki/Internet_meme">internet memes</a>. what a great idea.</p>
+
+<p>i compiled a list of links for you to enjoy information on the memes (with mini explanations mainly from <a href="http://en.wikipedia.org/wiki/List_of_Internet_phenomena">wikipedia</a>), ordered by youtube hits:</p>
+
+<ul>
+<li><a href="http://www.youtube.com/watch?v=9bZkp7q19f0">gangnam style</a>, 664,8mio hits <strong>wow</strong>, A song and music video by South Korean rapper, Psy, showing him doing an "invisible horse dance" across a number of odd locations, leading to its viral spread as well as the single reaching international music charts</li>
+<li><a href="http://www.youtube.com/watch?v=QH2-TGUlwu4">nyan cat</a>, 87.5mio hits,  A YouTube video of an animated flying cat, set to a Utau song</li>
+<li><a href="http://www.youtube.com/watch?v=4r7wHMg5Yjg">honey bagder</a>, 53.4mio hits, A YouTube video posted in 2011 by Randall featuring a comedic narration dubbed over pre-existing National Geographic footage</li>
+<li><a href="http://www.youtube.com/watch?v=OQSNhk5ICTI">double rainbow</a>, 35.7mio hits, Video posted to YouTube by Paul Vasquez of him filming a rainbow with a secondary bow at Yosemite National Park. Vasquez, possibly intoxicated during the filming by the tone of his voice, is heard to say amazing and philosophical questions about the rainbows, such as "what do they mean?". Subsequently, the video went viral, furthered by an auto-tuned song using the video's audio track</li>
+<li><a href="http://www.youtube.com/watch?v=J---aiyznGQ">keyboard cat</a>, 27.9mio hits, Footage of a cat playing an electric keyboard that is appended to the end of blooper or other video as if to play the participants off stage after a mistake or gaffe</li>
+<li><a href="http://www.youtube.com/watch?v=TWfph3iNC-k">grinding the crack</a>, 19.1mio hits, ...</li>
+<li><a href="http://www.youtube.com/watch?v=EVwlMVYqMu4">two dining dogs</a>, 14.4mio hits, two dogs sit on a table but they have human hands pretending that they eat a normal meal. the humans providing the hands and "managing" the dogs are hidden under the table</li>
+<li><a href="http://www.youtube.com/watch?v=FQt-h753jHI">ken lee</a>, 12.9mio hits, Badly garbled song sung by Bulgarian Music Idol hopeful Valentina Hasan. The name "Ken Lee" was misunderstood from the English lyric "Can't live," as in "Can't live, if living is without you" from the song "Without You" by Badfinger</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[oredev 2012]]></title>
+    <link href="http://batteryslave.com/blog/2012/11/06/oredev/"/>
+    <updated>2012-11-06T21:52:00+01:00</updated>
+    <id>http://batteryslave.com/blog/2012/11/06/oredev</id>
+    <content type="html"><![CDATA[<p>since monday i am in malmö, sweden. attending the <a href="http://oredev.org/">oredev conference</a>. its been great here. what happend till now:</p>
+
+<h2>monday:</h2>
+
+<ul>
+<li>continous delivery with tom sulston und rachel laycock. great stuff.</li>
+<li>in the evening we met at <a href="http://www.ribersborgskallbadhus.se/">kallbadhus</a> a sauna in the sea. after you got heated up you can take a dip in the cold seawater. monday there where 6°C. crazy...</li>
+</ul>
+
+
+<h2>tuesday:</h2>
+
+<ul>
+<li>started with vim masterclass with drew neil. his new book practical vim is out on pragpub. and his workshop was great. i learned a lot about some vim stuff i didnt know. instead of giving a light overview of all the stuff vim can do drew concentrated on some very important basics. e.g. text objects, optimizing your commands for the mighty dot-command and macros</li>
+<li>next: vim workshop with tim berglund. he is a githubber and a great speaker. unfortunately for him he had a soar throat but that resulted in a great voice...sorry tim. so we learnded git basics and some inside stuff as well. luckily he didnt go through hie whole 500 pages slidedeck...</li>
+</ul>
+
+
+<p>on wednesday the conference part starts. so you can expect over 1000 people. and a lot of great sessions.</p>
+
+<p>hope to see you there</p>
+]]></content>
+  </entry>
+  
+</feed>
