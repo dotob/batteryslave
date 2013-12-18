@@ -4,7 +4,7 @@
   <title><![CDATA[batteryslave]]></title>
   <link href="http://batteryslave.com/atom.xml" rel="self"/>
   <link href="http://batteryslave.com/"/>
-  <updated>2013-12-18T21:28:18+01:00</updated>
+  <updated>2013-12-18T21:34:26+01:00</updated>
   <id>http://batteryslave.com/</id>
   <author>
     <name><![CDATA[basti]]></name>
@@ -12,15 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[disqus added]]></title>
-    <link href="http://batteryslave.com/blog/2012/11/12/disqus-added/"/>
-    <updated>2012-11-12T20:40:00+01:00</updated>
-    <id>http://batteryslave.com/blog/2012/11/12/disqus-added</id>
-    <content type="html"><![CDATA[<p>just activated diqus for comments. go crazy&#8230;</p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[oredev twitter statistics]]></title>
@@ -878,6 +869,21 @@ i followed the steps that the installer told me and go. just needed to apt-get s
     <updated>2009-05-14T19:22:00+02:00</updated>
     <id>http://batteryslave.com/blog/2009/05/14/post-skillsmatter-london-day-2</id>
     <content type="html"><![CDATA[<p>i am still not adapted to the hour time difference between germany and the uk. so i awoke a hour to early.arrived early at the old session house where the workshops take place and decided to hear the f#-workshop with robert pickering. the workshop was full of f# content. robert is real expert. the speed we rushed through the slides was amazing. but at the and we arrived at some beautiful examples of the power of f# which robert ported from python out of the book &#8220;collective intelligence&#8221; by <span class="ptBrand">toby segaran - great read by the way. he drawed some nice dendrogramms e.g. of a blogclustering algorithm. </span><span class="ptBrand">after the light lunchbag (nearly the same like yesterday) james, david and i got a small beer before we joined the advanced nhibernate workshop with ayende.</span><span class="ptBrand">wow the room was full. big speaker, big room, big audience - great. so ayende told he has no slides and nothing prepared at all. he questioned the audience to supply topics he would then talk about. he collected about 25 topics&#8230;for a 4h workshop&#8230;not bad. and it was fun. for example the suggested topic &#8220;stored procedures&#8221; he wrote down as &#8220;stored procedures, and how they bite you in the ass&#8221;. ayende is really cool. the rest of the talk was also very passionate.</span>after that gojko guided the group to the alt.net beers. snacks and drinks where sponsored by thoughtworks and skillsmatter (thanks for that). i learned serialseb is the dictator of the alt.net beers. he managed the geeky crowd to really get to two talks around document databases and bdd. some of the speakers had an alcohol clouded mind to say the least. but it was real fun. it was an amazing day 2.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[skillsmatter, london: day 1]]></title>
+    <link href="http://batteryslave.com/blog/2009/05/12/post-skillsmatter-london-day-1/"/>
+    <updated>2009-05-12T00:06:00+02:00</updated>
+    <id>http://batteryslave.com/blog/2009/05/12/post-skillsmatter-london-day-1</id>
+    <content type="html"><![CDATA[<p>so the first day is finished. when i arrived at skillsmatter i met michel. like expected. first talk with ian cooper about internal dsls in c#. cool intro to the matter. now i need to have a look at some stuff:- push-button- vs. fluent-api
+- <a href="http://code.google.com/p/nbuilder/">nbuilder</a>
+- closures are code handled like data
+- <a href="http://ayende.com/Blog/2005/10/29/StaticReflection.aspx">static reflection</a>
+- <a href="http://ayende.com/default.aspx">rhino dsl</a>
+- <a href="http://code.google.com/p/mite-net/">mite</a>
+after that we got a lunchbag and sat in the sun for an hour. then sebastien lambla joined. i didnt know much about him but he seemed funny and interesting so i decided to see his talk instead of the fitnesse one. and it was great. he stated that he had only 3h of sleep because he had to get openrasta to work for the workshop. but he got it and the workshop went great.when the workshop ended we all went to have a beer. there where some discussions with lambla aka serialseb, oren aka ayende and some other nice guys.we ended the evening with pizza at pizza express with 14 funny people where we had also some great discussions about latin as a language in school and introducing agile techniques to teams in very big and long lasting projects. very interesting.know i am done, have a good night</p>
 ]]></content>
   </entry>
   
