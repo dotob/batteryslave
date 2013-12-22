@@ -1,0 +1,21 @@
+---
+layout: post
+title: "oredev 2012"
+date: 2012-11-06 21:52
+comments: true
+categories: oredev
+---
+
+since monday i am in malmö, sweden. attending the [oredev conference](http://oredev.org/). its been great here. what happend till now:
+
+## monday: 
+- continous delivery with tom sulston und rachel laycock. great stuff. 
+- in the evening we met at [kallbadhus](http://www.ribersborgskallbadhus.se/) a sauna in the sea. after you got heated up you can take a dip in the cold seawater. monday there where 6°C. crazy...
+
+## tuesday:
+- started with vim masterclass with drew neil. his new book practical vim is out on pragpub. and his workshop was great. i learned a lot about some vim stuff i didnt know. instead of giving a light overview of all the stuff vim can do drew concentrated on some very important basics. e.g. text objects, optimizing your commands for the mighty dot-command and macros
+- next: vim workshop with tim berglund. he is a githubber and a great speaker. unfortunately for him he had a soar throat but that resulted in a great voice...sorry tim. so we learnded git basics and some inside stuff as well. luckily he didnt go through hie whole 500 pages slidedeck...
+
+on wednesday the conference part starts. so you can expect over 1000 people. and a lot of great sessions. 
+
+hope to see you there

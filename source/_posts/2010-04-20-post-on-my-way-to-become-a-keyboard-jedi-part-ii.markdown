@@ -1,0 +1,27 @@
+---
+layout: post
+title: "on my way to become a keyboard jedi, part II"
+date: 2010-04-20 23:05
+comments: true
+---
+last time i told you about launchy as a program starter. this time i want to talk about window handling.to switch between windows most people know that you can flip through your open applications with alt+tab. but in vista and 7 you can after you entered alt+tab once move through the applications with the cursor. e.g. when you have many open applications they are arranged in a row-column-layout when pressing alt+tab. the first item is highlighted. then instead of going though all the items one-by-one you can go down and right for example.see this video:
+<object id="scPlayer" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="400" height="214" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="quality" value="high" /><param name="bgcolor" value="#FFFFFF" /><param name="flashVars" value="thumb=http://content.screencast.com/users/dotob/folders/Jing/media/ecdb4d30-fbed-445c-81a2-cda0da5c63d7/FirstFrame.jpg&amp;containerwidth=370&amp;containerheight=198&amp;content=http://content.screencast.com/users/dotob/folders/Jing/media/ecdb4d30-fbed-445c-81a2-cda0da5c63d7/alt_tab_with_cursor.mp4&amp;blurover=false" /><param name="allowFullScreen" value="true" /><param name="scale" value="showall" /><param name="allowScriptAccess" value="always" /><param name="base" value="http://content.screencast.com/users/dotob/folders/Jing/media/ecdb4d30-fbed-445c-81a2-cda0da5c63d7/" /><param name="src" value="http://content.screencast.com/users/dotob/folders/Jing/media/ecdb4d30-fbed-445c-81a2-cda0da5c63d7/jingh264player.swf" /><param name="flashvars" value="thumb=http://content.screencast.com/users/dotob/folders/Jing/media/ecdb4d30-fbed-445c-81a2-cda0da5c63d7/FirstFrame.jpg&amp;containerwidth=370&amp;containerheight=198&amp;content=http://content.screencast.com/users/dotob/folders/Jing/media/ecdb4d30-fbed-445c-81a2-cda0da5c63d7/alt_tab_with_cursor.mp4&amp;blurover=false" /><param name="allowfullscreen" value="true" /><embed id="scPlayer" type="application/x-shockwave-flash" width="370" height="198" src="http://content.screencast.com/users/dotob/folders/Jing/media/ecdb4d30-fbed-445c-81a2-cda0da5c63d7/jingh264player.swf" base="http://content.screencast.com/users/dotob/folders/Jing/media/ecdb4d30-fbed-445c-81a2-cda0da5c63d7/" allowscriptaccess="always" scale="showall" allowfullscreen="true" flashvars="thumb=http://content.screencast.com/users/dotob/folders/Jing/media/ecdb4d30-fbed-445c-81a2-cda0da5c63d7/FirstFrame.jpg&amp;containerwidth=370&amp;containerheight=198&amp;content=http://content.screencast.com/users/dotob/folders/Jing/media/ecdb4d30-fbed-445c-81a2-cda0da5c63d7/alt_tab_with_cursor.mp4&amp;blurover=false" bgcolor="#FFFFFF" quality="high"></embed></object>
+
+next thing: window management with [winsplit revolution](http://www.winsplit-revolution.com/):see this video:
+<object id="scPlayer" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="400" height="290" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="quality" value="high" /><param name="bgcolor" value="#FFFFFF" /><param name="flashVars" value="thumb=http://content.screencast.com/users/dotob/folders/Jing/media/e8c82c10-bf77-48af-b911-8132c81b4601/FirstFrame.jpg&amp;containerwidth=400&amp;containerheight=290&amp;content=http://content.screencast.com/users/dotob/folders/Jing/media/e8c82c10-bf77-48af-b911-8132c81b4601/winsplit_revolution.mp4&amp;blurover=false" /><param name="allowFullScreen" value="true" /><param name="scale" value="showall" /><param name="allowScriptAccess" value="always" /><param name="base" value="http://content.screencast.com/users/dotob/folders/Jing/media/e8c82c10-bf77-48af-b911-8132c81b4601/" /><param name="src" value="http://content.screencast.com/users/dotob/folders/Jing/media/e8c82c10-bf77-48af-b911-8132c81b4601/jingh264player.swf" /><param name="flashvars" value="thumb=http://content.screencast.com/users/dotob/folders/Jing/media/e8c82c10-bf77-48af-b911-8132c81b4601/FirstFrame.jpg&amp;containerwidth=400&amp;containerheight=290&amp;content=http://content.screencast.com/users/dotob/folders/Jing/media/e8c82c10-bf77-48af-b911-8132c81b4601/winsplit_revolution.mp4&amp;blurover=false" /><param name="allowfullscreen" value="true" /><embed id="scPlayer" type="application/x-shockwave-flash" width="400" height="290" src="http://content.screencast.com/users/dotob/folders/Jing/media/e8c82c10-bf77-48af-b911-8132c81b4601/jingh264player.swf" base="http://content.screencast.com/users/dotob/folders/Jing/media/e8c82c10-bf77-48af-b911-8132c81b4601/" allowscriptaccess="always" scale="showall" allowfullscreen="true" flashvars="thumb=http://content.screencast.com/users/dotob/folders/Jing/media/e8c82c10-bf77-48af-b911-8132c81b4601/FirstFrame.jpg&amp;containerwidth=400&amp;containerheight=290&amp;content=http://content.screencast.com/users/dotob/folders/Jing/media/e8c82c10-bf77-48af-b911-8132c81b4601/winsplit_revolution.mp4&amp;blurover=false" bgcolor="#FFFFFF" quality="high"></embed></object>
+
+here are the keycombinations:
+
+* Ctrl+Alt+1 = Bottom left corner of the screen
+* Ctrl+Alt+2 = Bottom part
+* Ctrl+Alt+3 = Bottom right corner
+* Ctrl+Alt+4 = Left part
+* Ctrl+Alt+5 = Full screen
+* Ctrl+Alt+6 = Right part
+* Ctrl+Alt+7 = Upper left corner
+* Ctrl+Alt+8 = Upper part
+* Ctrl+Alt+9 = Upper right corner
+
+it is a great tool - really.
+
+to be continued... 

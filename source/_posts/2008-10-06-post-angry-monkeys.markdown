@@ -1,0 +1,7 @@
+---
+layout: post
+title: "angry monkeys"
+date: 2008-10-06 21:50
+comments: true
+---
+today i got a copy of the book [The Productive Programmer](http://www.amazon.de/Productive-Programmer-Theory-Practice-OReilly/dp/0596519788) by Neal Ford seems like a great book. i will write about it when i read it more but while scrolling through it a small story got my attention: the angry monkeys. great stuff. here it is:> several years ago some scientist made an experiment. they put 5 monkeys in a cage, hung some bananas on the ceiling and added a stepladder to the scenery. the monkeys got the bananas with the ladder. in the next step the scientists sprayed the monkeys with ice cold water as soon as they touched the stepladder. so they learned not to touch the ladder what means no bananas. next step: remove a monkey and add one who doesn't now the scene. so the monkey tried to get the bananas with the ladder. as soon as he reaches over to the ladder the other monkeys beat him up (angry monkeys). the monkeys that know the water where replaced by unknown monkeys in the next steps until not one monkeys knew why they beat up the new clueless monkey.u see at the end none of the monkeys know why they beat up the clueless one. doesn't this sound familiar? ever got the answer: "cause we do it that way forever?" the monkeys would say that...so u should find a better cause for something. and when you dont know why. don't do it!so long basti 
